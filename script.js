@@ -7,7 +7,7 @@
          document.querySelector("#line-1").classList.add("active");
         nextbut.addEventListener("click" ,() => {
 			document.querySelector(`#circle-${activeCircle}`).classList.remove("active");
-			document.querySelector(`#line-${activeCircle}`).classList.remove("active");
+			//document.querySelector(`#line-${activeCircle}`).classList.remove("active");
 			activeCircle++;
 			document.querySelector(`#circle-${activeCircle}`).classList.add("active");
 			document.querySelector(`#line-${activeCircle}`).classList.add("active");
@@ -15,3 +15,11 @@
 			
 			
         })
+        previousbut.addEventListener("click",()=>{
+			if(activeCircle>1){
+				document.querySelector(`#circle-${activeCircle}`).classList.remove("active");
+			    document.querySelector(`#line-${activeCircle}`).classList.remove("active");
+				activeCircle--;
+				document.querySelector(`#circle-${activeCircle}`).classList.add("active");
+			}
+		})
